@@ -9,14 +9,15 @@ $w_config = [
     'db_table_prefix' => '',						//préfixe ajouté aux noms de table
 
 	//authentification, autorisation
-	'security_user_table' => 'users',				//nom de la table contenant les infos des utilisateurs
-	'security_id_property' => 'id',					//nom de la colonne pour la clef primaire
-	'security_username_property' => 'username',		//nom de la colonne pour le "pseudo"
-	'security_email_property' => 'email',			//nom de la colonne pour l'"email"
-	'security_password_property' => 'password',		//nom de la colonne pour le "mot de passe"
-	'security_role_property' => 'role',				//nom de la colonne pour le "role"
+	'security_user_table' => 'user',				//nom de la table contenant les infos des utilisateurs
+	'security_id_property' => 'usr_id',					//nom de la colonne pour la clef primaire
+	'security_username_property' => 'usr_username',		//nom de la colonne pour le "pseudo"
+	'security_email_property' => 'usr_email',			//nom de la colonne pour l'"email"
+	'security_password_property' => 'usr_password',		//nom de la colonne pour le "mot de passe"
+	'security_role_property' => 'usr_role',				//nom de la colonne pour le "role"
 
-	'security_login_route_name' => 'login',			//nom de la route affichant le formulaire de connexion
+	// not sure if this works
+	'security_login_route_name' => 'user_signin',			//nom de la route affichant le formulaire de connexion
 
 	// configuration globale
 	'site_name'	=> 'Micromonio', 								// contiendra le nom du site
