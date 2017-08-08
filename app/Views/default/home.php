@@ -17,12 +17,27 @@
 					<a class="title"><?= $currentRow["vid_name"] ?></a>
 					<a class="console">Console</a>
 				</div>
-		</div>
+			</div>
 	<?php endforeach; ?>
-	</div>
+		</div>
+		<div class="titleEndBox">
+			<h1>TEAM MICROMONIO</h1>
+		</div>
+		<div class="endBox">
+			<div class="leftEndBox">
+				<img src="../public/assets/images/mickael.png" alt="" class="imageEnd">
+				<h2>MICKAEL FERNANDES</h2>
+				<h3>FRONT DEVELOPER</h3>
+			</div>
+			<div class="rightEndBox">
+				<img src="../public/assets/images/johnny.png" alt="" class="imageEnd">
+				<h2>JOHNNY LIMA</h2>
+				<h3>BACK DEVELOPER</h3>
+			</div>
+		</div>
 </main>
 <footer>
-	
+
 	<h1>Copyright &copy; Mickael Fernandes &amp; Johnny Lima 2017</h1>
 </footer>
 
