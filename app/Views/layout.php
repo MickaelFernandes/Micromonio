@@ -10,12 +10,12 @@
 	<header>
 		<nav class="navbar">
 			<div class="containerNav">
-				<a href="#" class="LOGO">Micromonio</a>
+				<a href="<?= $this->url('default_home') ?>" class="LOGO">Micromonio</a>
 				<ul id="menu">
 					<a class="linkMenu" href="<?= $this->url('default_home') ?>"><li>Home</li></a>
 					<a class="linkMenu" href="<?= $this->url('console_consoles') ?>"><li>Consoles</li></a>
-					<a class="linkMenu" href="#"><li>Sign In</li></a>
-					<a class="linkMenu" href="#"><li>Sign Up</li></a>
+					<a class="linkMenu" href="<?= $this->url('user_signin') ?>"><li>Sign In</li></a>
+					<a class="linkMenu" href="<?= $this->url('user_signup') ?>"><li>Sign Up</li></a>
 				</ul>
 			</div>
 		</nav>

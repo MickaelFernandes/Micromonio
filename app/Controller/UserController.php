@@ -12,13 +12,13 @@ class UserController extends Controller {
 
     public function signinPost() {
         // debug($_POST);
-//
+        //
         // // Récupération des données
         // $username = isset($_POST['signup_username']) ? trim($_POST['signup_username']) : '';
         // $email = isset($_POST['signup_email']) ? trim($_POST['signup_email']) : '';
         // $pw1 = isset($_POST['signup_pw1']) ? trim($_POST['signup_pw1']) : '';
         // $pw2 = isset($_POST['signup_pw2']) ? trim($_POST['signup_pw2']) : '';
-//
+        //
         // // Validation des données
         // $formValid = true;
         // if (empty($email)) {
@@ -58,8 +58,7 @@ class UserController extends Controller {
     }
 
     public function signup() {
-        debug($_POST); //useless... to be deleted afterwards
-
+        // Begin :
         if (!empty($_POST)) {
             echo "first if <br />";
             // Récupération des données
