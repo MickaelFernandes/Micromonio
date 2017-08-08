@@ -161,6 +161,65 @@ nav{
 }
 
 
+/***endbox style ***/
+
+.endBox{
+background-image: url("../images/mooning.png");
+display: flex;
+flex-direction: row;
+}
+
+.titleEndBox{
+  background-image: url("../images/mooning.png");
+  text-align: center;
+  font-family: "Helvetica";
+  color: white;
+  font-size: 25px;
+  text-decoration: underline;
+  padding-top: 25px;
+  padding-bottom: 70px;
+}
+.leftEndBox{
+  margin-left: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  font-family: "Helvetica";
+  color: white;
+  font-size: 15px;
+}
+
+.leftEndBox h2{
+  padding-top: 20px;
+}
+
+.rightEndBox{
+margin-left: 10%;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-bottom: 40px;
+font-family: "Helvetica";
+color: white;
+font-size: 15px;
+}
+
+.rightEndBox h2{
+  padding-top: 20px;
+}
+
+.imageEnd{
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.textEnd{
+  width: 250px;
+}
+
 /*** footer style ***/
 
 
