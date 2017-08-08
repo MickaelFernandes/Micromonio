@@ -4,10 +4,10 @@ namespace Controller;
 
 use \W\Controller\Controller;
 
-class UsersController extends Controller {
+class UserController extends Controller {
 
     public function signin() {
-        $this->show('user/signin');
+        $this->show('user/signin.php');
     }
 
     public function signinPost() {

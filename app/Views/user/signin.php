@@ -1,5 +1,5 @@
 <?php
-$this->layout('layoutBootstrap', array('title' => 'Sign in'));
+$this->layout('layout', array('title' => 'Sign in'));
 ?>
 
 <?php
@@ -7,7 +7,11 @@ $this->layout('layoutBootstrap', array('title' => 'Sign in'));
 $this->start('main_content');
 ?>
 
-sign in .php
+<form method="post" action="">
+    <input type="text"  name="emailToto" placeholder="Username or Email address" /><br />
+    <input type="password"  name="passwordToto1" placeholder="Your password" /><br />
+    <button type="submit">Submit</button>
+</form>
 
 <?php
 //fin du bloc
