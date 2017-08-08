@@ -15,4 +15,12 @@
 
 		// add.php
 		['GET', '/add/', 'AddGame#add', 'add_add_game'],
+		['POST', '/add/', 'AddGame#addPost', 'add_add_game_post'],
+
+		// Users signin & signup
+		['GET', '/signin/', 'User#signin', 'user_signin'],
+		['POST', '/signin/', 'User#signinPost', 'user_signin_post'],
+
+		['GET|POST', '/signup/', 'User#signup', 'user_signup'],
+
 	);
