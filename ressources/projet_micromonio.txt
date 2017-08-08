@@ -1,0 +1,104 @@
+-----------------------------------------------
+ Projet avec W : site de gestion de jeux vidéo
+-----------------------------------------------
+
+==> Suivre les étapes dans l'ordre des numéros
+
+1- Importer la database : videogame.sql
+	=> génère la database "micromonio"
+
+2- Faire la page "Home"
+
+3- Faire le menu avec "Home", "Consoles". Si admin, alors on aura aussi "Add a videogame" 
+
+4- Faire la page "Consoles"
+
+5- Faire la page "Console" 
+
+6- Faire la page "Ajout/Modification d'un jeu vidéo"
+
+7- Mettre en place le système d'autorisation (signup, signin)
+	* Il faut être connecté pour accéder aux pages du projet
+	* La page "Ajout/Modification d'un jeu vidéo" est accessible aux "admin"
+	* Toutes les autres pages sont accessibles aux "user"
+
+<OPTIONS>
+
+8- Faire la page "Détails"
+
+9- Ajouter la "Suppression" à la page "Ajout/Modification d'un jeu vidéo"
+
+10- Ajouter la gestion du mot de passe oublié
+
+11- Faire la page "Genre"
+
+12- Faire la page "Ajout/Modification/Suppression" d'une console
+
+13- Faire la page "Ajout/Modification/Suppression" d'un genre
+
+</OPTIONS>
+
+<INFORMATION>
+
+Pour ceux qui voudraient se connecter à une API pour récupérer les informations sur un jeu vidéo automatiquement (comme avec OMDb API), vous pouvez utiliser :
+https://www.giantbomb.com/api/
+
+</INFORMATION>
+
+
+<PAGES>
+
+Home
+	* URL : http://micromonio.dev/
+	* afficher 4 jeux vidéo aléatoirement (titre, image) avec le nom de la console correspondante
+	* l'image et le titre du jeu amène sur la page "Détails"
+	* le nom de la console amène sur la page "Console"
+	
+Consoles (ne pas confondre avec "Console")
+	* URL : http://micromonio.dev/consoles/
+	* Liste toutes les consoles en DB (nom)
+	* Pour chaque console, un lien "Voir ses jeux vidéo" amènera à la page "Console"
+
+Console (platform)
+	* URL : http://micromonio.dev/consoles/1-PC/ (où 1 est l'id de la console)
+	* Liste tous les jeux vidéo (titre, genre et année) pour la console courante (selon id dans l'URL)
+	* Le titre de chaque jeu vidéo amène sur la page "Détails" du jeu vidéo
+
+Genre (option)
+	* URL : http://micromonio.dev/genre/1-Aventure/ (où 1 est l'id du genre)
+	* Liste tous les jeux vidéo (titre, console et année) pour le genre
+	* Le titre de chaque jeu vidéo amène sur la page "Détails" du jeu vidéo
+
+Détails
+	* URL : http://micromonio.dev/consoles/1-PC/21-day-of-the-tentacle/
+		** 1 est l'id de la console
+		** PC est le nom de la console
+		** 21 est l'id du jeu video
+		** day-of-the-tentacle est le titre reformaté du jeu vidéo
+	* Liste toutes les informations sur le jeu vidéo donné
+	* Si l'utilisateur connecté est "admin", alors un lien "Modifier" apparait et renvoie sur la page "Ajout/Modification d'un jeu vidéo"
+
+Ajout/Modification d'un jeu vidéo
+	* URL Ajout : http://micromonio.dev/admin/videogame/add
+	* URL Modification : http://micromonio.dev/admin/videogame/edit/21
+		** 21 est l'id du jeu video
+	* "CU" parmi CRUD
+	* Formulaire pour ajouter ou modifier
+
+Ajout/Modification/Suppresion d'une console (option)
+	* URL Ajout : http://micromonio.dev/admin/console/add
+	* URL Modification : http://micromonio.dev/admin/console/edit/21
+		** 21 est l'id de la console
+	* "CUD" parmi CRUD
+	* Formulaire pour ajouter ou modifier
+	* Menu déroulant (dropdown) pour sélectionner la console à modifier (comme catégorie dans GCLF)
+
+Ajout/Modification/Suppresion d'un genre (option)
+	* URL Ajout : http://micromonio.dev/admin/genre/add
+	* URL Modification : http://micromonio.dev/admin/genre/edit/21
+		** 21 est l'id du genre
+	* "CUD" parmi CRUD
+	* Formulaire pour ajouter ou modifier
+	* Menu déroulant (dropdown) pour sélectionner le genre à modifier (comme catégorie dans GCLF)
+	
+</PAGES>

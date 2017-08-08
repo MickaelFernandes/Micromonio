@@ -1,0 +1,69 @@
+html, body {
+	font-family: Consolas, monaco, monospace;
+	background-color: #272822;
+	color: #F8F8F2;
+}
+
+.container {
+	margin: 50px;
+}
+
+a {
+	text-decoration: none;
+	color: #A6E22E;
+}
+
+a:hover {
+	color: #F92672;
+}
+
+h1 {
+	color: #F92672;
+}
+
+h2 {
+	color: #66D9EF;
+}
+
+h2 strong {
+	color: #F92672;
+}
+
+nav ul li {
+	display: inline-block;
+	width: 150px;
+	height:50px;
+	text-decoration: none;
+	background-color: #271000;
+	text-align: center;
+	line-height: 50px;
+}
+
+nav ul li a {
+	display: inline-block;
+	width: 150px;
+	height:50px;
+}
+
+#containerGames{
+	display : flex;
+	flex-wrap: wrap;
+	background-color: #271500;
+	padding: 15px;
+	max-width: 1230px;
+}
+
+.displayGames {
+	display: inline-block;
+	margin: 10px;
+	padding: 15px;
+	height: 500px;
+	width : 350px;
+	background-color: grey;
+	border: 1px solid lightgrey;
+}
+
+.displayGames img {
+	width: 100%;
+	max-height: 390px;
+}
