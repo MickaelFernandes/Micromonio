@@ -7,17 +7,19 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 </head>
 <body>
-	<div class="container">
-		<header>
-			<h1>Project M :: <?= $this->e($title) ?></h1>
-			<nav>
-				<ul>
-					<li><a href="<?= $this->url('default_home') ?>">HOME</a></li>
-					<li><a href="<?= $this->url('console_consoles') ?>">Consoles</a></li>
-					<li><a href="<?= $this->url('add_add_game') ?>">Add a Videogame</a></li>
+	<header>
+		<nav class="navbar">
+			<div class="containerNav">
+				<a href="#" class="LOGO">Micromonio</a>
+				<ul id="menu">
+					<a class="linkMenu" href="<?= $this->url('default_home') ?>"><li>Home</li></a>
+					<a class="linkMenu" href="<?= $this->url('console_consoles') ?>"><li>Consoles</li></a>
+					<a class="linkMenu" href="#"><li>Sign In</li></a>
+					<a class="linkMenu" href="#"><li>Sign Up</li></a>
 				</ul>
-			</nav>
-		</header>
+			</div>
+		</nav>
+	</header>
 
 		<section>
 			<?= $this->section('main_content') ?>
@@ -25,6 +27,6 @@
 
 		<footer>
 		</footer>
-	</div>
+
 </body>
 </html>
