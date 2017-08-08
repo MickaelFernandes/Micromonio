@@ -1,69 +1,181 @@
-html, body {
-	font-family: Consolas, monaco, monospace;
-	background-color: #272822;
-	color: #F8F8F2;
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.container {
-	margin: 50px;
+nav{
+  background: #232323;
+  height: 80px;
 }
 
-a {
-	text-decoration: none;
-	color: #A6E22E;
+.containerNav{
+  padding-top: 10px;
 }
 
-a:hover {
-	color: #F92672;
+.LOGO{
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Sedgwick Ave Display', cursive;
+  color: white;
+  font-size: 45px;
+  margin-left: 10px;
+
+}
+#menu{
+  display: flex;
+  flex-direction: row;
+  float: right;
 }
 
-h1 {
-	color: #F92672;
+.linkMenu{
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  margin-top: 10px;
+  margin-right: 5px;
+  padding-right: 10px;
+  font-family: 'Sedgwick Ave Display', cursive;
 }
 
-h2 {
-	color: #66D9EF;
+.linkMenu:hover{
+  color: tomato;
 }
 
-h2 strong {
-	color: #F92672;
+
+
+/*****animated background *****/
+
+@keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	50% { background-position: 100% 100%; }
+  100% { background-position: 0 0; }
 }
 
-nav ul li {
-	display: inline-block;
-	width: 150px;
-	height:50px;
-	text-decoration: none;
-	background-color: #271000;
-	text-align: center;
-	line-height: 50px;
+#bg {
+
+  width:100%;
+  height:60vh;
+  background:url(https://static.pexels.com/photos/159369/xbox-xbox-one-microsoft-joystick-159369.jpeg);
+  background-size:125% 125%;
+  //background-attachment:fixed;
+  background-position:bottom;
+  animation: animatedBackground 40s linear infinite;
 }
 
-nav ul li a {
-	display: inline-block;
-	width: 150px;
-	height:50px;
+.inside {
+   text-align:center;
+    width:100%;
+    height:100%;
+    box-shadow:inset 0px 9000px 0px rgba(0,0,0,0.2);
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+
+}
+.inside h1{
+      font: 200px "Helvetica";
+      color:white;
+      font-variant:small-caps;
+
+    }
+
+.inside h2{
+  font:30px "Helvetica";
+  color:white;
+
 }
 
-#containerGames{
-	display : flex;
-	flex-wrap: wrap;
-	background-color: #271500;
-	padding: 15px;
-	max-width: 1230px;
+.inside a{
+  height: 28px;
+  width: 120px;
+  margin-top: 30px;
+  padding-top: 2px;
+  background-color: white;
+  border-radius: 7px;
+  text-decoration: none;
+  justify-content: center;
+  align-content: center;
+  font:22px "Helvetica";
+  color: black;
 }
 
-.displayGames {
-	display: inline-block;
-	margin: 10px;
-	padding: 15px;
-	height: 500px;
-	width : 350px;
-	background-color: grey;
-	border: 1px solid lightgrey;
+.inside a:hover{
+  color: tomato;
 }
 
-.displayGames img {
-	width: 100%;
-	max-height: 390px;
+/*** random game generator ***/
+
+
+.middleBox{
+  width:100%;
+  height:60vh;
+  background-color: #303030;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+.card{
+
+  height: 380px;
+  width: 260px;
+  margin-top: 80px;
+}
+
+.card img{
+  height: inherit;
+  width: inherit;
+}
+
+.txtCard{
+  background-color: white;
+  margin-top: 0;
+  bottom: 0;
+  height: 15%;
+  text-align: center;
+  font-family: "Helvetica";
+  display: flex;
+  flex-direction: column;
+}
+
+.txtCard .title{
+  font-size: 30px;
+}
+
+.txtCard .title:hover{
+  color: tomato;
+}
+
+.txtCard .console{
+  font-size: 15px;
+}
+
+.txtCard .console:hover{
+  color: tomato;
+}
+
+
+/*** footer style ***/
+
+
+footer{
+  background: #232323;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+footer h1{
+  font-family: 'Sedgwick Ave Display', cursive;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
 }
