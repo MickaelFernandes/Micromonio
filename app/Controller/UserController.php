@@ -11,47 +11,54 @@ class UserController extends Controller {
     }
 
     public function signinPost() {
-        // debug($_POST);
-        //
-        // // Récupération des données
-        // $username = isset($_POST['signup_username']) ? trim($_POST['signup_username']) : '';
-        // $email = isset($_POST['signup_email']) ? trim($_POST['signup_email']) : '';
-        // $pw1 = isset($_POST['signup_pw1']) ? trim($_POST['signup_pw1']) : '';
-        // $pw2 = isset($_POST['signup_pw2']) ? trim($_POST['signup_pw2']) : '';
-        //
-        // // Validation des données
-        // $formValid = true;
-        // if (empty($email)) {
-        //     $this->flash('Email vide', 'danger'); // Attention, un seul message en session :(
-        //     $formValid = false;
-        // }
-        //
-        // if (empty($password)) {
-        //     $this->flash('Mot de passe vide', 'danger'); // Attention, un seul message en session :(
-        //     $formValid = false;
-        // }
-        //
-        // // Si tout est ok => on vérifie dans la DB
-        // if ($formValid) {
-        //     $authModel = new \W\Security\AuthentificationModel();
-        //     $userId = $authModel->isValidLoginInfo($email, $password);
-        //
-        //     // Utilisateur existant
-        //     if ($userId > 0) {
-        //         // Je récupère les données en DB
-        //         $usersModel = new \Model\UsersModel();
-        //         $userInfos = $usersModel->find($userId);
-        //
-        //         // passer en session
-        //         $authModel->logUserIn($userInfos);
-        //
-        //         // TODO rediriger vers la home
-        //         $this->redirectToRoute('default_home');
-        //     }
-        //     else {
-        //         $this->flash('Utilisateur/Mot de passe non reconnu', 'danger');
-        //     }
-        // }
+        debug($_POST);
+        echo "1st condition <br />";
+
+        // Récupération des données
+        $username = isset($_POST['signin_username']) ? trim($_POST['signup_username']) : '';
+        $email = isset($_POST['signin_email']) ? trim($_POST['signup_email']) : '';
+        $pw = isset($_POST['signin_pw']) ? trim($_POST['signup_pw']) : '';
+
+        // Validation des données
+        $formValid = true;
+
+        if (empty($email)) {
+            $this->flash('Email vide', 'danger'); // Attention, un seul message en session :(
+            $formValid = false;
+            echo "error 1 <br />";
+        }
+
+        if (empty($pw)) {
+            $this->flash('Mot de passe vide', 'danger'); // Attention, un seul message en session :(
+            $formValid = false;
+            echo "error 2 <br />";
+        }
+
+        // Si tout est ok => on vérifie dans la DB
+        if ($formValid) {
+            echo "2st condition <br />";
+
+            $authModel = new \W\Security\AuthentificationModel();
+            $userId = $authModel->isValidLoginInfo($email, $pw);
+
+            // Utilisateur existant
+            if ($userId > 0) {
+                echo "3st condition <br />";
+                // Je récupère les données en DB
+                $usersModel = new \Model\UsersModel();
+                $userInfos = $usersModel->find($userId);
+
+                // passer en session
+                $authModel->logUserIn($userInfos);
+
+                // TODO rediriger vers la home
+                $this->redirectToRoute('default_home');
+            }
+            else {
+                $this->flash('Utilisateur/Mot de passe non reconnu', 'danger');
+                echo "error 3 <br />";
+            }
+        }
 
         // On affiche la vue, mais on arrivera ici que si erreur
         $this->show('user/signin');
