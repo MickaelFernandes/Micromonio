@@ -19,8 +19,12 @@
 
 		// Users signin & signup
 		['GET', '/signin/', 'User#signin', 'user_signin'],
+		['GET', '/signin', 'User#signin', 'user_signin2'],
+
 		['POST', '/signin/', 'User#signinPost', 'user_signin_post'],
+		['POST', '/signin', 'User#signinPost', 'user_signin_post2'],
 
 		['GET|POST', '/signup/', 'User#signup', 'user_signup'],
+		['GET|POST', '/signup', 'User#signup', 'user_signup2'],
 
 	);
