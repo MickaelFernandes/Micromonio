@@ -26,6 +26,7 @@
 		</section>
 
 		<footer>
+			<h1>Copyright &copy; Mickael Fernandes &amp; Johnny Lima 2017</h1>
 		</footer>
 
 </body>
