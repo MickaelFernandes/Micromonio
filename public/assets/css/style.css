@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
 
 
+html{
+  position: relative;
+    min-height: 100%;
+}
+
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -34,10 +40,11 @@ nav{
   text-decoration: none;
   list-style: none;
   color: white;
-  margin-top: 10px;
+  font-size: 25px;
+  margin-top: 15px;
   margin-right: 5px;
   padding-right: 10px;
-  font-family: 'Sedgwick Ave Display', cursive;
+  font-family: "Helvetica";
 }
 
 .linkMenu:hover{
@@ -126,15 +133,22 @@ nav{
   height: 380px;
   width: 260px;
   margin-top: 80px;
+  text-decoration: none;
 }
+
 
 .card img{
   height: inherit;
   width: inherit;
 }
 
+.card:hover .txtCard{
+  color: tomato;
+  background-color: rgba(255, 255, 255, 1);
+}
+
 .txtCard{
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   margin-top: 0;
   bottom: 0;
   height: 15%;
@@ -142,23 +156,10 @@ nav{
   font-family: "Helvetica";
   display: flex;
   flex-direction: column;
+  padding-top: 5px;
+  color: black;
 }
 
-.txtCard .title{
-  font-size: 30px;
-}
-
-.txtCard .title:hover{
-  color: tomato;
-}
-
-.txtCard .console{
-  font-size: 15px;
-}
-
-.txtCard .console:hover{
-  color: tomato;
-}
 
 
 /***endbox style ***/
@@ -167,6 +168,7 @@ nav{
 background-image: url("../images/mooning.png");
 display: flex;
 flex-direction: row;
+height: 42vh;
 }
 
 .titleEndBox{
@@ -225,16 +227,287 @@ font-size: 15px;
 
 footer{
   background: #232323;
-  height: 40px;
   display: flex;
   flex-direction: column;
-
+  position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    overflow:hidden;
 }
 
 footer h1{
-  font-family: 'Sedgwick Ave Display', cursive;
+  font-family: 'Helvetica';
   color: white;
-  font-size: 25px;
+  font-size: 10px;
   text-align: center;
   margin-top: 20px;
+}
+
+
+
+/*** consoles list ***/
+
+.consolesBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  height: 65vh;
+  width: 40%;
+  margin-left: 5vh;
+}
+
+.listeConsoles{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;;
+  padding: 20px;
+}
+
+.listeConsolesLink{
+  font-size: 20px;
+  font-family: 'Helvetica';
+  width: 115px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 15%;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 8px;
+}
+.listeConsolesLink:hover{
+  color: tomato;
+  background-color: white;
+}
+
+
+@keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	50% { background-position: 100% 100%; }
+  100% { background-position: 0 0; }
+}
+
+#bgg {
+  width:100%;
+  height:90vh;
+  background:url("http://www.ultrahdfreewallpapers.com/uploads/large/games/halo-5-game-wallpaper-004.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.inside2 {
+  text-align:center;
+  width:100%;
+  height: 100%;
+  box-shadow:inset 0px 9000px 0px rgba(0,0,0,0.2);
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  align-content:center;
+  justify-content:center;
+
+}
+
+
+/*** game of console css ***/
+
+
+#bggg{
+  width:100%;
+  height:90vh;
+  background:url("https://s-media-cache-ak0.pinimg.com/originals/4a/ef/99/4aef99f91b23831c2035ef0de43b1080.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.inside3{
+  display: flex;
+  flex-direction: row;
+}
+
+.consoleBoxInfo{
+  display: flex;
+  flex-direction: row;
+}
+
+.consoleBoxInfo a{
+  text-decoration: none;
+  color: black;
+}
+.displayGames{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30vh;
+  height: 60vh;
+  margin-right: 10vh;
+  margin-top: 15vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: 'Helvetica';
+}
+
+.displayGames:hover{
+  background-color: rgba(255, 255, 255, 1);
+  color: tomato;
+}
+
+.displayGames img{
+  width: inherit;
+  height: 80%;
+}
+
+
+.displayGames p{
+  padding-top: 17px;
+  padding-bottom: 5px;
+
+}
+
+/*** style for game display ***/
+
+
+.gameDisplay{
+  display: flex;
+  flex-direction: row;
+  background-image: url("http://www.amazingwallpaperz.com/wp-content/uploads/Halo-3-Master-Chief-Digital-Wallpapers.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+
+.imageGame{
+  border: 1px solid black;
+  width: 40vh;
+  height: 50vh;
+  margin-top: 12vh;
+  margin-left: 30vh;
+}
+.imageGame img{
+  width: 100%;;
+  height: 100%;;
+}
+
+.contentGame{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20%;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  width: 60vh;;
+  height: 50vh;
+  margin-top: 12vh;
+  margin-left: 30vh;
+}
+
+.contentGame h1{
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  color: tomato;
+}
+
+.contentGame p{
+  padding: 2vh;
+  color: tomato;
+}
+
+/*** sign in style ***/
+
+.formSignUp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+background-image: url("https://www.ngu-gaming.com/uploads/monthly_2017_06/GCJRhiA.png.d32e33e0e342703371153f4c67629f0a.png");
+height: 90vh;
+width: 100%;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.formBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  width: 80vh;
+  height: 60vh;
+  margin-left: 33%;
+
+}
+
+.headFormBox{
+  font-family: 'Helvetica';
+  margin-top:  -10px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 29px;
+}
+
+.headFormBox p{
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 55px;
+  margin-left: 116px;
+  margin-top: 40px;
+}
+
+
+.form {
+  z-index: 15;
+  position: relative;
+  background: $white;
+  width: $max-width;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba($black, .1);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+label {
+      display: block;
+      margin: 10px 0 10px 80px;
+      color: $gray;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+}
+
+input {
+      outline: none;
+      display: block;
+      background: rgba($black, 0.1);
+      width: 80%;
+      border: 0;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 12px 20px;
+      color: $gray;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: $semibold;
+      line-height: inherit;
+      transition: 0.3s ease;
+      margin-left: 80px;
+    }
+
+#buttonSignUp{
+  margin-left: 36%;
+  margin-top: 45px;
+  width: 20vh;
+  height: 5vh;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 25px;
+  border-radius: 4px;
 }
