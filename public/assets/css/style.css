@@ -264,8 +264,8 @@ footer h1{
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin-top: 45px;;
-  padding: 20px;
+  margin-top: 40px;;
+  padding: 10px;
 }
 
 .listeConsolesLink{
@@ -419,7 +419,7 @@ footer h1{
   color: tomato;
 }
 
-/*** sign in style ***/
+/*** sign up style ***/
 
 .formSignUp{
   display: flex;
@@ -439,7 +439,7 @@ background-size: cover;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   width: 80vh;
-  height: 60vh;
+  height: 70vh;
   margin-left: 33%;
 
 }
