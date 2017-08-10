@@ -14,10 +14,10 @@ class UserController extends Controller {
         debug($_POST);
         echo "1st condition <br />";
 
-        // Récupération des données
+        // // Récupération des données
         $username = isset($_POST['signin_username']) ? trim($_POST['signup_username']) : '';
         $email = isset($_POST['signin_email']) ? trim($_POST['signup_email']) : '';
-        $pw = isset($_POST['signin_pw']) ? trim($_POST['signup_pw']) : '';
+        $pw = isset($_POST['signin_password']) ? trim($_POST['signup_password']) : '';
 
         // Validation des données
         $formValid = true;
@@ -45,14 +45,15 @@ class UserController extends Controller {
             if ($userId > 0) {
                 echo "3st condition <br />";
                 // Je récupère les données en DB
-                $usersModel = new \Model\UsersModel();
+                $usersModel = new \Model\UserModel();
                 $userInfos = $usersModel->find($userId);
 
                 // passer en session
                 $authModel->logUserIn($userInfos);
 
-                // TODO rediriger vers la home
+                // Rediriger vers la home
                 $this->redirectToRoute('default_home');
+                print_r($_SESSION);
             }
             else {
                 $this->flash('Utilisateur/Mot de passe non reconnu', 'danger');
