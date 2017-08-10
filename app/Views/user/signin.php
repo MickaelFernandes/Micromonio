@@ -7,11 +7,27 @@ $this->layout('layout', array('title' => 'Sign in'));
 $this->start('main_content');
 ?>
 
-<form method="post" action="">
-    <input type="text"  name="emailToto" placeholder="Username or Email address" /><br />
-    <input type="password"  name="passwordToto1" placeholder="Your password" /><br />
-    <button type="submit">Submit</button>
-</form>
+<div class="formSignIn">
+    <div class="formBox">
+        <div class="headFormBoxIn">
+            <h1> <p>MICROMONIO</p></h1>
+        </div>
+        <form method="POST" action="">
+                <div class="form-group">
+                  <label for="username">E-mail</label>
+                  <input type="email"  name="signin_email" required="required"/>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password"  name="singin_password" required="required"/>
+                </div>
+                <div class="form-group" >
+                  <button type="submit" id="buttonSignIn">MICROMONIO IN!</button>
+                </div>
+          </form>
+    </div>
+</div>
+
 
 <?php
 //fin du bloc
