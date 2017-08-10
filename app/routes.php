@@ -20,7 +20,7 @@
 		['POST', '/add/', 'AddGame#addPost', 'add_add_game_post'],
 		['POST', '/add/', 'AddGame#addPost', 'add_add_game_post2'],
 
-		// Users signin & signup
+		// User signin & signup
 		['GET', '/signin/', 'User#signin', 'user_signin'],
 		['GET', '/signin', 'User#signin', 'user_signin2'],
 
@@ -30,4 +30,6 @@
 		['GET|POST', '/signup/', 'User#signup', 'user_signup'],
 		['GET|POST', '/signup', 'User#signup', 'user_signup2'],
 
+		// User log out
+		['GET', '/logout/', 'User#signout', 'user_signout'],
 	);

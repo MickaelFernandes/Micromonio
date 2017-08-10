@@ -19,7 +19,7 @@ $this->start('main_content');
                 </div>
                 <div class="form-group">
                   <label for="password">Password</label>
-                  <input type="password"  name="singin_password" required="required"/>
+                  <input type="password"  name="signin_password" required="required"/>
                 </div>
                 <div class="form-group" >
                   <button type="submit" id="buttonSignIn">MICROMONIO IN!</button>
