@@ -264,8 +264,8 @@ footer h1{
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin-top: 45px;;
-  padding: 20px;
+  margin-top: 40px;;
+  padding: 10px;
 }
 
 .listeConsolesLink{
@@ -419,7 +419,7 @@ footer h1{
   color: tomato;
 }
 
-/*** sign in style ***/
+/*** sign up style ***/
 
 .formSignUp{
   display: flex;
@@ -439,7 +439,7 @@ background-size: cover;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   width: 80vh;
-  height: 60vh;
+  height: 70vh;
   margin-left: 33%;
 
 }
@@ -503,6 +503,48 @@ input {
     }
 
 #buttonSignUp{
+  margin-left: 36%;
+  margin-top: 45px;
+  width: 20vh;
+  height: 5vh;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 25px;
+  border-radius: 4px;
+}
+
+/*** sign in form ***/
+
+
+.formSignIn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("http://www.hdwallpaperspulse.com/wp-content/uploads/2015/07/16/logo-gaming-wallpaper.jpg");
+  height: 90vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headFormBoxIn{
+  font-family: 'Helvetica';
+  margin-top:  -10px;
+  margin-bottom: 50px;
+  margin-left: 18vh;
+  display: flex;
+  flex-direction: row;
+  font-size: 35px;
+}
+
+
+.headFormBoxIn p{
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 55px;
+  margin-top: 40px;
+  margin-left: 10vh;
+}
+
+#buttonSignIn{
   margin-left: 36%;
   margin-top: 45px;
   width: 20vh;
